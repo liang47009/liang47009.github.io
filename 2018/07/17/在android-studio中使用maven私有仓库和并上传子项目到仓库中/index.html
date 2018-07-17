@@ -5,19 +5,19 @@
   
 
   
-  <title>Hello Hexo | Hexo</title>
+  <title>在android studio中使用maven私有仓库和并上传子项目到仓库中 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="just for test">
+  <meta name="description" content="在android studio中使用maven私有仓库和并上传子项目到仓库中## 上传脚本 apply plugin: ‘maven’def MAVEN_LOCAL_PATH = ‘http://172.17.14.68:8081/nexus/content/repositories/public/&amp;#39;def ARTIFACT_ID = ‘xxx’def VERSION_NAME = ‘1.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello Hexo">
-<meta property="og:url" content="http://yoursite.com/2018/07/17/first-night/index.html">
+<meta property="og:title" content="在android studio中使用maven私有仓库和并上传子项目到仓库中">
+<meta property="og:url" content="http://yoursite.com/2018/07/17/在android-studio中使用maven私有仓库和并上传子项目到仓库中/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="just for test">
+<meta property="og:description" content="在android studio中使用maven私有仓库和并上传子项目到仓库中## 上传脚本 apply plugin: ‘maven’def MAVEN_LOCAL_PATH = ‘http://172.17.14.68:8081/nexus/content/repositories/public/&amp;#39;def ARTIFACT_ID = ‘xxx’def VERSION_NAME = ‘1.">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-17T02:55:14.276Z">
+<meta property="og:updated_time" content="2018-07-17T09:24:16.226Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello Hexo">
-<meta name="twitter:description" content="just for test">
+<meta name="twitter:title" content="在android studio中使用maven私有仓库和并上传子项目到仓库中">
+<meta name="twitter:description" content="在android studio中使用maven私有仓库和并上传子项目到仓库中## 上传脚本 apply plugin: ‘maven’def MAVEN_LOCAL_PATH = ‘http://172.17.14.68:8081/nexus/content/repositories/public/&amp;#39;def ARTIFACT_ID = ‘xxx’def VERSION_NAME = ‘1.">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -64,10 +64,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-first-night" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-在android-studio中使用maven私有仓库和并上传子项目到仓库中" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/07/17/first-night/" class="article-date">
-  <time datetime="2018-07-17T02:55:14.352Z" itemprop="datePublished">2018-07-17</time>
+    <a href="/2018/07/17/在android-studio中使用maven私有仓库和并上传子项目到仓库中/" class="article-date">
+  <time datetime="2018-07-17T08:19:28.000Z" itemprop="datePublished">2018-07-17</time>
 </a>
     
   </div>
@@ -78,7 +78,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hello Hexo
+      在android studio中使用maven私有仓库和并上传子项目到仓库中
     </h1>
   
 
@@ -86,14 +86,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>just for test</p>
-</blockquote>
+        <p>在android studio中使用maven私有仓库和并上传子项目到仓库中##</p>
+<p>上传脚本</p>
+<p>apply plugin: ‘maven’<br>def MAVEN_LOCAL_PATH = ‘<a href="http://172.17.14.68:8081/nexus/content/repositories/public/&#39;" target="_blank" rel="noopener">http://172.17.14.68:8081/nexus/content/repositories/public/&#39;</a><br>def ARTIFACT_ID = ‘xxx’<br>def VERSION_NAME = ‘1.0.0’<br>def GROUP_ID = ‘xxx.xxxxxxx.xxx’<br>def ACCOUNT = ‘deployment’<br>def PASSWORD = ‘snailgame’</p>
+<p>//脚本：将Lib打成aar包上传至maven私有库<br>uploadArchives {<br>  repositories {<br>    mavenDeployer {<br>        repository(url:MAVEN_LOCAL_PATH ){<br>            authentication(userName: ACCOUNT, password: PASSWORD)}<br>        pom.project {<br>            groupId GROUP_ID<br>            artifactId ARTIFACT_ID<br>            version VERSION_NAME<br>            packaging ‘aar’<br>      }<br>    }<br>  }<br>}</p>
+<p>编译项目并且上传<br>使用gradle + task_name的方式 如： gradle uploadArchives 成功后可在web上看见生成的文件：</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/07/17/first-night/" data-id="cjjpjc4ef0000jdmfcwnrwbop" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/07/17/在android-studio中使用maven私有仓库和并上传子项目到仓库中/" data-id="cjjpjc4ek0002jdmfc7v0uitm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -102,19 +104,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2018/07/17/在android-studio中使用maven私有仓库和并上传子项目到仓库中/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          在android studio中使用maven私有仓库和并上传子项目到仓库中
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/07/17/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/07/17/first-night/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title">Hello Hexo</div>
     </a>
   
 </nav>
